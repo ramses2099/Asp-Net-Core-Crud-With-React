@@ -7,7 +7,7 @@ using AspNetCoreCrudWithReact.Models;
 
 namespace AspNetCoreCrudWithReact.Controllers
 {
-    [Route("api/[controller]")]
+    
     public class EmployeeController : Controller
     {
         EmployeeDataAccessLayer da = new EmployeeDataAccessLayer();

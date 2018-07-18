@@ -15,11 +15,10 @@ export class FetchEmployee extends React.Component<RouteComponentProps<{}>, Fetc
         this.state = { empList: [], loading: true };
 
         fetch('api/Employee/Index')
-            //.then(res => res.json() as Promise<EmployeeData[]>)
-            .then(res => { console.log(res.json()) });
-           /*-- .then(data => {
+            .then(res => res.json() as Promise<EmployeeData[]>)
+            .then(data => {
                 this.setState({ empList: data, loading: false })
-            });--*/
+            });
 
         //
         this.handlerDelete = this.handlerDelete.bind(this);
@@ -95,11 +94,11 @@ export class FetchEmployee extends React.Component<RouteComponentProps<{}>, Fetc
 }
 
 
-export class EmployeeData {
-    employeeId: number = 0;
-    firstName: string = "";
-    lastName: string = "";
-    gender: string = "";
-    city: string = "";
-    department: string = "";
+export interface EmployeeData {
+    employeeId: number;
+    firstName: string;
+    lastName: string;
+    gender: string;
+    city: string;
+    department: string;
 }
