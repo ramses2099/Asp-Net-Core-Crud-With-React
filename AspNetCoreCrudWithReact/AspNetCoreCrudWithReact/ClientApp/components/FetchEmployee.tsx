@@ -83,7 +83,7 @@ export class FetchEmployee extends React.Component<RouteComponentProps<{}>, Fetc
                         <td>{emp.city}</td>
                         <td>
                             <a className="action" onClick={(id) => this.handlerEdit(emp.employeeId)}>Edit</a> | 
-                            <a className="action" onClick={(id) => this.handlerDelete(emp.employeeId)}>Edit</a>
+                            <a className="action" onClick={(id) => this.handlerDelete(emp.employeeId)}>Delete</a>
                         </td>
                     </tr>
                     )}            
@@ -94,11 +94,11 @@ export class FetchEmployee extends React.Component<RouteComponentProps<{}>, Fetc
 }
 
 
-export interface EmployeeData {
-    employeeId: number;
-    firstName: string;
-    lastName: string;
-    gender: string;
-    city: string;
-    department: string;
+export class EmployeeData {
+    employeeId: number = 0;
+    firstName: string ="";
+    lastName: string = "";
+    gender: string = "";
+    city: string = "";
+    department: string = "";
 }
